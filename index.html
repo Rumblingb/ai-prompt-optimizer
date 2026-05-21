@@ -1,1 +1,461 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>AI Prompt Optimizer — AgentPay Labs</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#e0e0e0;line-height:1.6}.container{max-width:800px;margin:0 auto;padding:60px 20px}.logo{font-size:14px;color:#6366f1;letter-spacing:2px;text-transform:uppercase;margin-bottom:40px}h1{font-size:48px;font-weight:700;margin-bottom:16px;background:linear-gradient(135deg,#6366f1,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.subtitle{font-size:20px;color:#888;margin-bottom:40px}.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin:40px 0}.feature{background:#111;border:1px solid #222;border-radius:12px;padding:24px}.feature h3{font-size:16px;color:#6366f1;margin-bottom:8px}.feature p{font-size:14px;color:#888}.pricing{display:flex;gap:20px;margin:40px 0;flex-wrap:wrap}.card{background:#111;border:1px solid #222;border-radius:12px;padding:32px;flex:1;min-width:200px}.card.featured{border-color:#6366f1;background:#0f0f1a}.card h3{font-size:18px;margin-bottom:12px}.price{font-size:36px;font-weight:700;margin-bottom:8px}.price span{font-size:16px;color:#888;font-weight:400}.card p{font-size:14px;color:#888;margin-bottom:20px}.btn{display:inline-block;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px}.btn-primary{background:#6366f1;color:white}.btn-outline{border:1px solid #444;color:#ccc}.footer{text-align:center;color:#555;font-size:12px;margin-top:60px}</style></head><body><div class="container"><div class="logo">AgentPay Labs</div><h1>AI Prompt Optimizer</h1><p class="subtitle">Optimize AI prompts for better results</p><div class="features"><div class="feature"><h3>⚡ Fast</h3><p>Instant results</p></div><div class="feature"><h3>🔐 Secure</h3><p>All client-side</p></div><div class="feature"><h3>🎯 Simple</h3><p>No configuration needed</p></div></div><div class="pricing"><div class="card"><h3>Free</h3><p class="price">$0</p><p>Basic access</p><a href="#" class="btn btn-outline">Try Free</a></div><div class="card featured"><h3>Pro</h3><p class="price">$9<span>/mo</span></p><p>Full access</p><a href="https://buy.stripe.com/00w8wR8Xt6ZKgek6UX1oI0c" class="btn btn-primary">Subscribe</a></div></div><div class="footer">© 2026 AgentPay Labs. Built for the agent economy.</div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Prompt Optimizer — Score & Improve Your Prompts Free</title>
+<meta name="description" content="Analyze and improve any AI prompt instantly. Get scored on specificity, role clarity, output format, context, and constraints. Free, client-side, no signup.">
+<meta property="og:title" content="AI Prompt Optimizer — Better Prompts, Better Results">
+<meta property="og:description" content="Paste any prompt. Get a score across 5 dimensions. See an improved version. Works for Claude, GPT-4, Gemini, and any LLM. Free.">
+<meta property="og:url" content="https://rumblingb.github.io/ai-prompt-optimizer/">
+<link rel="canonical" href="https://rumblingb.github.io/ai-prompt-optimizer/">
+<style>
+:root{
+  --bg:#09080f;--surface:#100f1a;--surface2:#17162a;--border:rgba(255,255,255,.08);
+  --text:#e8e6f4;--muted:#7870a0;--accent:#a855f7;--accent2:#7c3aed;--accent3:#c084fc;
+  --green:#4ade80;--amber:#fbbf24;--red:#f87171;--radius:10px;
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6}
+
+nav{padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:rgba(9,8,15,.85);backdrop-filter:blur(12px);position:sticky;top:0;z-index:50}
+.nav-logo{font-weight:800;font-size:.95rem;display:flex;align-items:center;gap:.5rem}
+.nav-logo .icon{width:28px;height:28px;background:linear-gradient(135deg,var(--accent2),var(--accent));border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.nav-right{display:flex;gap:.6rem;align-items:center}
+.nav-link{font-size:.8rem;color:var(--muted);padding:.3rem .65rem;border-radius:5px;transition:color .15s;text-decoration:none}
+.nav-link:hover{color:var(--text)}
+.btn-pro{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;font-size:.8rem;font-weight:700;padding:.35rem .9rem;border-radius:6px;border:none;cursor:pointer;transition:opacity .15s;font-family:var(--font)}
+.btn-pro:hover{opacity:.85}
+
+.hero{text-align:center;padding:4rem 1.5rem 2.5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 40% at 50% 0%,rgba(124,58,237,.16) 0%,transparent 70%);pointer-events:none}
+.badge{display:inline-flex;align-items:center;gap:.35rem;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.22);color:var(--accent3);padding:.25rem .85rem;border-radius:99px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-bottom:1.1rem}
+.hero h1{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:900;letter-spacing:-.025em;line-height:1.1;margin-bottom:.7rem}
+.hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent3));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);font-size:.98rem;max-width:480px;margin:0 auto 2rem;line-height:1.65}
+
+/* MAIN APP */
+.app{max-width:920px;margin:0 auto;padding:0 1.5rem 4rem;display:grid;gap:1.25rem}
+
+/* INPUT SECTION */
+.input-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.card-header{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.card-title{font-size:.82rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+.card-actions{display:flex;gap:.5rem}
+.act-btn{font-size:.75rem;padding:.28rem .65rem;border-radius:5px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;font-family:var(--font);transition:all .15s}
+.act-btn:hover{border-color:rgba(168,85,247,.3);color:var(--text)}
+
+textarea{width:100%;background:transparent;border:none;outline:none;color:var(--text);font-size:.92rem;font-family:var(--font);padding:1.1rem 1.25rem;line-height:1.7;resize:vertical;min-height:140px}
+textarea::placeholder{color:var(--muted)}
+
+.analyze-bar{padding:.85rem 1.25rem;border-top:1px solid var(--border);display:flex;align-items:center;gap:.85rem;flex-wrap:wrap}
+.model-select{background:var(--surface2);border:1px solid var(--border);color:var(--muted);padding:.35rem .75rem;border-radius:6px;font-size:.8rem;font-family:var(--font);cursor:pointer;outline:none}
+.model-select option{background:var(--surface2)}
+.token-info{font-size:.75rem;color:var(--muted);margin-left:auto}
+.token-num{color:var(--accent3);font-weight:700}
+.analyze-btn{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#fff;border:none;padding:.65rem 1.6rem;border-radius:8px;font-size:.92rem;font-weight:700;cursor:pointer;font-family:var(--font);transition:all .2s;margin-left:auto}
+.analyze-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(168,85,247,.3)}
+.analyze-btn:disabled{opacity:.4;cursor:not-allowed;transform:none}
+
+/* SCORE SECTION */
+.results{display:none}
+.results.visible{display:grid;gap:1.25rem}
+
+/* OVERALL SCORE */
+.score-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.score-circle{position:relative;width:90px;height:90px;flex-shrink:0}
+.score-circle svg{transform:rotate(-90deg)}
+.score-bg{stroke:rgba(255,255,255,.06)}
+.score-fill{stroke:url(#grad);stroke-linecap:round;transition:stroke-dashoffset .8s cubic-bezier(.4,0,.2,1)}
+.score-num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:1.4rem;line-height:1}
+.score-label{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.score-meta h3{font-size:1rem;font-weight:800;margin-bottom:.25rem}
+.score-meta p{font-size:.83rem;color:var(--muted);line-height:1.5;max-width:420px}
+.grade-badge{display:inline-block;font-size:.72rem;font-weight:800;padding:.2rem .65rem;border-radius:5px;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
+.grade-A{background:rgba(74,222,128,.1);color:var(--green);border:1px solid rgba(74,222,128,.2)}
+.grade-B{background:rgba(251,191,36,.1);color:var(--amber);border:1px solid rgba(251,191,36,.2)}
+.grade-C{background:rgba(248,113,113,.1);color:var(--red);border:1px solid rgba(248,113,113,.2)}
+
+/* DIMENSION BARS */
+.dims-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.5rem}
+.dims-title{font-size:.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:1rem}
+.dim-row{margin-bottom:.95rem}
+.dim-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.35rem}
+.dim-name{font-size:.85rem;font-weight:600}
+.dim-score{font-size:.82rem;font-weight:800}
+.dim-bar-bg{height:6px;background:rgba(255,255,255,.06);border-radius:99px;overflow:hidden}
+.dim-bar-fill{height:100%;border-radius:99px;transition:width .7s cubic-bezier(.4,0,.2,1)}
+.dim-tip{font-size:.74rem;color:var(--muted);margin-top:.3rem;line-height:1.45}
+
+/* IMPROVED PROMPT */
+.improved-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.improved-header{padding:.85rem 1.25rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.improved-title{font-size:.82rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+.copy-improved{font-size:.78rem;padding:.3rem .75rem;border-radius:6px;border:1px solid rgba(168,85,247,.3);background:rgba(168,85,247,.08);color:var(--accent3);cursor:pointer;font-family:var(--font);transition:all .15s}
+.copy-improved:hover{background:rgba(168,85,247,.15)}
+.copy-improved.done{background:rgba(74,222,128,.1);border-color:rgba(74,222,128,.3);color:var(--green)}
+.improved-body{padding:1.25rem;font-size:.9rem;line-height:1.75;white-space:pre-wrap;color:var(--text);max-height:320px;overflow-y:auto}
+.improved-footer{padding:.75rem 1.25rem;border-top:1px solid var(--border);display:flex;gap:1.5rem;font-size:.75rem;color:var(--muted)}
+.stat-change{display:flex;align-items:center;gap:.35rem}
+.stat-change .up{color:var(--green)}
+.stat-change .down{color:var(--amber)}
+
+/* CHANGES LIST */
+.changes-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.5rem}
+.change-item{display:flex;gap:.75rem;padding:.65rem 0;border-bottom:1px solid var(--border)}
+.change-item:last-child{border-bottom:none}
+.change-icon{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:900;flex-shrink:0;margin-top:.15rem}
+.ci-add{background:rgba(74,222,128,.12);color:var(--green)}
+.ci-fix{background:rgba(251,191,36,.12);color:var(--amber)}
+.change-text{font-size:.83rem;color:var(--text);line-height:1.5}
+.change-text strong{color:var(--accent3)}
+
+/* TEMPLATES */
+.tpl-section{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.25rem 1.5rem}
+.tpl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.65rem;margin-top:.85rem}
+.tpl-chip{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:.7rem .9rem;cursor:pointer;transition:all .18s}
+.tpl-chip:hover{border-color:rgba(168,85,247,.35);background:rgba(168,85,247,.06)}
+.tpl-chip h4{font-size:.82rem;font-weight:700;margin-bottom:.2rem}
+.tpl-chip p{font-size:.72rem;color:var(--muted);line-height:1.4}
+
+@media(max-width:600px){
+  .score-card{gap:1rem}
+  .dims-card,.improved-card,.changes-card,.tpl-section{padding:1rem}
+  nav{padding:.7rem 1rem}
+  .nav-right .nav-link{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <div class="icon">✦</div>
+    Prompt Optimizer
+  </div>
+  <div class="nav-right">
+    <a href="https://rumblingb.github.io/jacks-toolbox/" class="nav-link">More Tools</a>
+    <button class="btn-pro" onclick="openPro()">Pro — $15 once</button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="badge">✦ Works with Claude · GPT-4 · Gemini</div>
+  <h1>Better prompts.<br><span>Better results.</span></h1>
+  <p>Paste any prompt. Get scored on 5 dimensions. See an improved version with specific suggestions — instantly, in your browser.</p>
+</div>
+
+<div class="app">
+  <div class="input-card">
+    <div class="card-header">
+      <span class="card-title">Your Prompt</span>
+      <div class="card-actions">
+        <button class="act-btn" onclick="loadExample('basic')">Load example</button>
+        <button class="act-btn" onclick="clearPrompt()">Clear</button>
+      </div>
+    </div>
+    <textarea id="promptInput" placeholder="Paste your prompt here…&#10;&#10;Example: Write a blog post about AI." oninput="updateTokens()"></textarea>
+    <div class="analyze-bar">
+      <select class="model-select" id="modelSelect">
+        <option value="claude">Claude</option>
+        <option value="gpt4">GPT-4 / o1</option>
+        <option value="gemini">Gemini</option>
+        <option value="llama">Llama / local</option>
+      </select>
+      <span class="token-info">~<span class="token-num" id="tokenCount">0</span> tokens</span>
+      <button class="analyze-btn" id="analyzeBtn" onclick="analyze()">Analyze Prompt →</button>
+    </div>
+  </div>
+
+  <div class="results" id="results">
+    <!-- Score, dims, improved, changes injected by JS -->
+  </div>
+
+  <div class="tpl-section">
+    <div class="dims-title">Quick-start templates</div>
+    <div class="tpl-grid" id="tplGrid"></div>
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#c084fc"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<script>
+const TEMPLATES=[
+  {title:'Rewrite / edit',desc:'Rewrite text in a new style',prompt:'You are an expert editor. Rewrite the following text in a [TONE: professional/casual/technical] tone, targeting [AUDIENCE]. Preserve all key information but improve clarity and flow. Output only the rewritten text.\n\nText to rewrite:\n[PASTE TEXT HERE]'},
+  {title:'Summarize',desc:'Summarize any content',prompt:'Summarize the following [CONTENT TYPE: article/meeting notes/report] in [NUMBER] bullet points. Each bullet should be one sentence. Focus on [KEY ASPECT: decisions/action items/key findings]. Do not add any introduction or conclusion.\n\n[PASTE CONTENT HERE]'},
+  {title:'Code reviewer',desc:'Review and improve code',prompt:'You are a senior [LANGUAGE] engineer. Review the following code for:\n1. Bugs and edge cases\n2. Security vulnerabilities\n3. Performance issues\n4. Readability\n\nFor each issue found, state: what it is, why it matters, and how to fix it. If the code is clean, say so.\n\n```[LANGUAGE]\n[PASTE CODE]\n```'},
+  {title:'Data extractor',desc:'Extract structured data',prompt:'Extract the following fields from the text below. Output as JSON only, no explanation.\n\nFields to extract:\n- [FIELD 1]\n- [FIELD 2]\n- [FIELD 3]\n\nIf a field is missing, use null.\n\nText:\n[PASTE TEXT]'},
+  {title:'Brainstorm ideas',desc:'Generate creative ideas',prompt:'Generate [NUMBER] distinct ideas for [TOPIC]. For each idea:\n- Name: one line\n- Description: 2 sentences\n- Why it works: one sentence\n\nContext: [AUDIENCE/CONSTRAINTS]. Avoid ideas that are too similar to each other.'},
+  {title:'Email draft',desc:'Write a professional email',prompt:'Write a [TONE: formal/friendly/direct] email from [YOUR NAME/ROLE] to [RECIPIENT ROLE] about [TOPIC]. The goal of the email is to [DESIRED OUTCOME]. Key points to include: [POINT 1], [POINT 2]. Keep it under 150 words. Subject line included.'},
+];
+
+const DIMENSIONS=[
+  {key:'specificity',name:'Specificity',desc:'Does the prompt give concrete, measurable details rather than vague instructions?',
+   check:(p)=>{
+     let s=0;
+     if(/\d+/.test(p))s+=20;
+     if(/specific|exact|precise|exactly|only|must/i.test(p))s+=15;
+     if(p.length>100)s+=15;
+     if(/example|for instance|such as/i.test(p))s+=15;
+     if(/format|structure|list|bullet|table|json|markdown/i.test(p))s+=15;
+     if(p.split('\n').length>3)s+=20;
+     return Math.min(100,s);
+   }},
+  {key:'role',name:'Role Clarity',desc:'Does the prompt define who or what the AI should be (expert, persona, system)?',
+   check:(p)=>{
+     let s=0;
+     if(/you are|act as|imagine you|as a|as an|pretend|your role|you're a/i.test(p))s+=50;
+     if(/expert|senior|professional|specialist|experienced/i.test(p))s+=25;
+     if(/your goal|your task|your job/i.test(p))s+=25;
+     return Math.min(100,s);
+   }},
+  {key:'format',name:'Output Format',desc:'Does it specify exactly what format the output should take?',
+   check:(p)=>{
+     let s=0;
+     if(/output|respond with|return|give me|provide/i.test(p))s+=20;
+     if(/json|markdown|bullet|numbered|list|table|paragraph|code|html|csv/i.test(p))s+=35;
+     if(/only|do not include|no explanation|without/i.test(p))s+=20;
+     if(/format:|structure:|example:/i.test(p))s+=25;
+     return Math.min(100,s);
+   }},
+  {key:'context',name:'Context',desc:'Does the prompt provide enough background for the AI to understand the situation?',
+   check:(p)=>{
+     let s=0;
+     if(p.length>150)s+=20;
+     if(p.length>300)s+=15;
+     if(/context:|background:|situation:|given that|because|since/i.test(p))s+=25;
+     if(/audience|user|customer|team|company|project/i.test(p))s+=20;
+     if(/goal|objective|purpose|aim/i.test(p))s+=20;
+     return Math.min(100,s);
+   }},
+  {key:'constraints',name:'Constraints',desc:'Does it define limits — length, scope, what to avoid, or what to focus on?',
+   check:(p)=>{
+     let s=0;
+     if(/avoid|do not|don't|never|no|without|exclude/i.test(p))s+=30;
+     if(/under|less than|max|maximum|limit|short|brief|concise/i.test(p))s+=25;
+     if(/focus on|only|prioritize|most important/i.test(p))s+=25;
+     if(/\d+\s*(words?|sentences?|bullets?|points?|items?|characters?)/i.test(p))s+=20;
+     return Math.min(100,s);
+   }}
+];
+
+const IMPROVEMENTS={
+  specificity:{
+    low:['Add specific numbers (e.g., "give me 5 examples", "in 200 words")', 'Include a concrete example of the output you want', 'Replace vague words like "good" or "better" with measurable criteria'],
+    med:['Add one more specific constraint or measurement', 'Include an example of the ideal output format']
+  },
+  role:{
+    low:['Add a role definition: "You are a senior [ROLE] with expertise in [DOMAIN]"', 'Define the persona\'s background or approach'],
+    med:['Strengthen the role with relevant expertise: e.g., "with 10 years experience in..."']
+  },
+  format:{
+    low:['Specify output format: JSON, bullet list, numbered list, table, or prose', 'Add "Output only the [FORMAT], no explanation"', 'Show a brief example of the expected structure'],
+    med:['Make the format requirement more explicit with a template or example']
+  },
+  context:{
+    low:['Add background: who is this for? what problem does it solve?', 'Include relevant constraints from your situation', 'Describe the audience and their knowledge level'],
+    med:['Add more context about the end use or audience of this output']
+  },
+  constraints:{
+    low:['Add what to avoid: "Do not include X"', 'Set a length limit: "Keep it under N words/bullets"', 'Narrow the scope: "Focus only on [SPECIFIC ASPECT]"'],
+    med:['Add one more constraint to sharpen the output']
+  }
+};
+
+function scoreColor(s){
+  if(s>=80)return'var(--green)';
+  if(s>=55)return'var(--amber)';
+  return'var(--red)';
+}
+
+function grade(s){
+  if(s>=80)return{g:'A',cls:'grade-A',label:'Strong prompt'};
+  if(s>=60)return{g:'B',cls:'grade-B',label:'Good — small improvements available'};
+  if(s>=40)return{g:'C',cls:'grade-C',label:'Needs work — see suggestions below'};
+  return{g:'D',cls:'grade-C',label:'Weak prompt — significant improvements needed'};
+}
+
+function buildImproved(original, dims){
+  let improved=original.trim();
+  const scores={};
+  dims.forEach(d=>scores[d.key]=d.score);
+
+  // Add role if missing
+  if(scores.role<40&&!/you are|act as/i.test(improved)){
+    improved='You are a helpful expert assistant.\n\n'+improved;
+  }
+
+  // Add format if missing
+  if(scores.format<40&&!/output|format|list|json|bullet/i.test(improved)){
+    improved+='\n\nProvide your response as a clear, structured answer.';
+  }
+
+  // Add constraint if missing
+  if(scores.constraints<40&&!/avoid|do not|don\'t|under|max/i.test(improved)){
+    improved+='\n\nBe concise and focus only on what was asked.';
+  }
+
+  // Add specificity nudge
+  if(scores.specificity<40&&improved.split('\n').length<=2){
+    improved+='\n\nBe specific and provide actionable details.';
+  }
+
+  return improved;
+}
+
+function buildChanges(dims){
+  const changes=[];
+  dims.forEach(d=>{
+    if(d.score<50){
+      const tips=IMPROVEMENTS[d.key]?.low||[];
+      tips.slice(0,1).forEach(tip=>{
+        changes.push({type:'fix',dim:d.name,tip});
+      });
+    } else if(d.score<75){
+      const tips=IMPROVEMENTS[d.key]?.med||[];
+      tips.slice(0,1).forEach(tip=>{
+        changes.push({type:'add',dim:d.name,tip});
+      });
+    }
+  });
+  return changes;
+}
+
+function analyze(){
+  const prompt=document.getElementById('promptInput').value.trim();
+  if(!prompt){alert('Paste a prompt to analyze.');return;}
+
+  const dims=DIMENSIONS.map(d=>({...d,score:d.check(prompt)}));
+  const total=Math.round(dims.reduce((a,b)=>a+b.score,0)/dims.length);
+  const g=grade(total);
+  const improved=buildImproved(prompt, dims);
+  const changes=buildChanges(dims);
+
+  const origTokens=Math.ceil(prompt.split(/\s+/).length*1.3);
+  const newTokens=Math.ceil(improved.split(/\s+/).length*1.3);
+  const circumference=2*Math.PI*38;
+  const dashOffset=circumference-(total/100)*circumference;
+
+  let dimsHTML=dims.map(d=>`
+    <div class="dim-row">
+      <div class="dim-header">
+        <span class="dim-name">${d.name}</span>
+        <span class="dim-score" style="color:${scoreColor(d.score)}">${d.score}/100</span>
+      </div>
+      <div class="dim-bar-bg"><div class="dim-bar-fill" style="width:${d.score}%;background:${scoreColor(d.score)}"></div></div>
+      ${d.score<75?`<div class="dim-tip">${IMPROVEMENTS[d.key]?.[d.score<50?'low':'med']?.[0]||d.desc}</div>`:''}
+    </div>
+  `).join('');
+
+  let changesHTML=changes.map(c=>`
+    <div class="change-item">
+      <div class="change-icon ${c.type==='add'?'ci-add':'ci-fix'}">${c.type==='add'?'+':'!'}</div>
+      <div class="change-text"><strong>${c.dim}:</strong> ${c.tip}</div>
+    </div>
+  `).join('');
+
+  const r=document.getElementById('results');
+  r.className='results visible';
+  r.innerHTML=`
+    <div class="score-card">
+      <div class="score-circle">
+        <svg width="90" height="90" viewBox="0 0 90 90">
+          <circle class="score-bg" cx="45" cy="45" r="38" fill="none" stroke-width="6"/>
+          <circle class="score-fill" cx="45" cy="45" r="38" fill="none" stroke-width="6"
+            stroke-dasharray="${circumference}" stroke-dashoffset="${circumference}" id="scoreArc"/>
+        </svg>
+        <div class="score-num"><span>${total}</span><span class="score-label">/ 100</span></div>
+      </div>
+      <div class="score-meta">
+        <div class="grade-badge ${g.cls}">${g.g} — ${g.label}</div>
+        <h3>Overall Prompt Score</h3>
+        <p>${changes.length===0?'This is a strong prompt across all dimensions. Minor tweaks could push it further.':'Found '+changes.length+' improvement'+( changes.length!==1?'s':'')+' across specificity, role, format, context, and constraints.'}</p>
+      </div>
+    </div>
+    <div class="dims-card">
+      <div class="dims-title">Score by dimension</div>
+      ${dimsHTML}
+    </div>
+    ${changes.length>0?`<div class="changes-card">
+      <div class="dims-title" style="margin-bottom:.85rem">Suggested improvements</div>
+      ${changesHTML}
+    </div>`:''}
+    <div class="improved-card">
+      <div class="improved-header">
+        <span class="improved-title">Optimized prompt</span>
+        <button class="copy-improved" id="copyImproved" onclick="copyImproved()">Copy improved prompt</button>
+      </div>
+      <div class="improved-body" id="improvedBody">${escH(improved)}</div>
+      <div class="improved-footer">
+        <span class="stat-change">Tokens: <span class="up">${origTokens}</span> → <span class="up">${newTokens}</span></span>
+        <span class="stat-change">Score: <span class="up">${total}/100</span></span>
+        <span class="stat-change">${changes.length} change${changes.length!==1?'s':''} applied</span>
+      </div>
+    </div>
+  `;
+
+  // Animate the arc
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      document.getElementById('scoreArc').style.strokeDashoffset=dashOffset;
+    });
+  });
+
+  r.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function copyImproved(){
+  const text=document.getElementById('improvedBody').textContent;
+  navigator.clipboard.writeText(text).then(()=>{
+    const btn=document.getElementById('copyImproved');
+    btn.textContent='✓ Copied!';btn.classList.add('done');
+    setTimeout(()=>{btn.textContent='Copy improved prompt';btn.classList.remove('done');},2000);
+  });
+}
+
+function updateTokens(){
+  const val=document.getElementById('promptInput').value;
+  const tokens=val.trim()?Math.ceil(val.trim().split(/\s+/).length*1.3):0;
+  document.getElementById('tokenCount').textContent=tokens;
+}
+
+function loadExample(type){
+  const examples={
+    basic:'Write a blog post about AI.',
+    medium:'Write a summary of this article about machine learning for a non-technical audience. Make it engaging.',
+    strong:'You are a senior technical writer. Summarize the following article for a C-suite audience with no technical background. Focus on business impact only. Output 3 bullet points, max 20 words each. Avoid jargon.\n\n[PASTE ARTICLE HERE]'
+  };
+  document.getElementById('promptInput').value=examples[type]||examples.basic;
+  updateTokens();
+}
+
+function clearPrompt(){
+  document.getElementById('promptInput').value='';
+  document.getElementById('results').className='results';
+  updateTokens();
+}
+
+function openPro(){window.open('https://buy.stripe.com/00w8wR8Xt6ZKgek6UX1oI0c','_blank');}
+
+function escH(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+
+// Build templates
+const grid=document.getElementById('tplGrid');
+TEMPLATES.forEach(t=>{
+  const el=document.createElement('div');
+  el.className='tpl-chip';
+  el.innerHTML=`<h4>${t.title}</h4><p>${t.desc}</p>`;
+  el.onclick=()=>{document.getElementById('promptInput').value=t.prompt;updateTokens();document.getElementById('promptInput').scrollIntoView({behavior:'smooth'});};
+  grid.appendChild(el);
+});
+</script>
+</body>
+</html>
